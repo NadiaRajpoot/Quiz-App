@@ -1,11 +1,11 @@
 import Header from "./Components/Header";
-import QuizTopicScreen from "./Components/QuizTopicScreen";
 import "./App.css";
+import { Outlet } from "react-router-dom";
 function App() {
   return (
     <>
       <Header />
-      <QuizTopicScreen />
+      <Outlet/>
     </>
   );
 }
