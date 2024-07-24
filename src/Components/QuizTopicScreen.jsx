@@ -14,9 +14,9 @@ const QuizTopicScreen = () => {
       </div>
       <div>
         <div className="grid grid-cols-4 mt-8 gap-8">
-          {quizTopics.map((item) => {
+          {quizTopics.map((item, index) => {
             return (
-              <div className="flex gap-2 border border-gray-300 rounded-lg p-4 cursor-pointer hover:border-purple-950">
+              <div key={index} className="flex gap-2 border border-gray-300 rounded-lg p-4 cursor-pointer hover:border-purple-950">
                 <img src={item.icon} alt="" />
                 <span className="content-center font-bold text-slate-700 ">
                   {item.title}
