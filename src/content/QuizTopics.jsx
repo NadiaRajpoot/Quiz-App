@@ -1,4 +1,3 @@
-
 import Angular from "../assets/icons/angular.svg";
 import CSS from "../assets/icons/Css.svg";
 import Django from "../assets/icons/django.svg";
@@ -12,52 +11,52 @@ import BulbIcon from "../assets/icons/bulb.svg";
 
 export const quizTopics = [
   {
-    id:"react",
+    id: "react",
     title: "React",
     icon: ReactIcon,
   },
   {
-    id:"js",
+    id: "js",
     title: "JavaScript",
     icon: JavaScript,
   },
   {
-    id:"py",
+    id: "py",
     title: "Python",
     icon: Python,
   },
   {
-    id:"gk",
+    id: "gk",
     title: "General Knowledge",
     icon: BulbIcon,
   },
   {
-    id:"gatsby",
+    id: "gatsby",
     title: "Gatsby",
     icon: Gatsby,
   },
   {
-    id:"angular",
+    id: "angular",
     title: "Angular",
     icon: Angular,
   },
   {
-    id:"django",
+    id: "django",
     title: "Django",
     icon: Django,
   },
   {
-    id:"css",
+    id: "css",
     title: "CSS",
     icon: CSS,
   },
   {
-    id:"kotlin",
+    id: "kotlin",
     title: "Kotlin",
     icon: Kotlin,
   },
   {
-    id:"laravel",
+    id: "laravel",
     title: "Laravel",
     icon: Laravel,
   },

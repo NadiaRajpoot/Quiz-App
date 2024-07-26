@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { topicsData } from "../content/TopicQuiz";
-
+import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import ScoreContext from "../ScoreContext";
 
 const TestPages = () => {
+  const { setScore } = useContext(ScoreContext);
+  const [answeredQuestions, setAnsweredQuestions] = useState({});
+
   const { subjectId, topicId } = useParams();
+  const navigate = useNavigate();
 
   const topic = topicsData
     .find((subject) => subject.subjectId === subjectId)
@@ -19,6 +25,15 @@ const TestPages = () => {
     }));
   };
 
+  const checkAns = (mcq, option) => {
+    if (mcq.answer === option && !answeredQuestions[mcq.question]) {
+      setScore((prev) => prev + 1);
+      setAnsweredQuestions((prev) => ({
+        ...prev,
+        [mcq.question]: true,
+      }));
+    }
+  };
   if (!topic) {
     return <div>Topic not found</div>;
   }
@@ -40,6 +55,8 @@ const TestPages = () => {
                     checked={selectedOptions[mcq.question] === option}
                     onChange={() => handleOptionChange(mcq.question, option)}
                     className="mr-2"
+                    onClick={() => checkAns(mcq, option)}
+                    required
                   />
                   {option}
                 </label>
@@ -48,6 +65,9 @@ const TestPages = () => {
           </div>
         ))}
         <button
+          onClick={(subjectId, topicId) => {
+            navigate(`/subjects/${subjectId}/topics/${topicId}/test/score`);
+          }}
           type="submit"
           className="px-6 py-3 rounded-lg bg-purple-950 text-white text-lg font-bold mt-4"
         >

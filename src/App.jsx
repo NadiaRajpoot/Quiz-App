@@ -1,12 +1,17 @@
 import Header from "./Components/Header";
 import "./App.css";
 import { Outlet } from "react-router-dom";
+import ScoreContext from "./ScoreContext";
+import { useState } from "react";
 function App() {
+  const [score, setScore] = useState(0);
   return (
-    <>
-      <Header />
-      <Outlet/>
-    </>
+    <ScoreContext.Provider value={{ score, setScore }}>
+      <>
+        <Header />
+        <Outlet />
+      </>
+    </ScoreContext.Provider>
   );
 }
 
