@@ -1,7 +1,9 @@
 import React from "react";
-import { quizTopics } from "./QuizTopics";
+import { quizTopics } from "../content/QuizTopics";
+import { useNavigate } from "react-router-dom";
 
 const QuizTopicScreen = () => {
+  const navigate = useNavigate()
   return (
     <div className="flex flex-col w-10/12 m-auto mt-14 items-center justify-center">
       <div className="flex flex-col gap-2">
@@ -14,9 +16,11 @@ const QuizTopicScreen = () => {
       </div>
       <div>
         <div className="grid grid-cols-4 mt-8 gap-8">
-          {quizTopics.map((item) => {
+          {quizTopics.map((item, index) => {
             return (
-              <div className="flex gap-2 border border-gray-300 rounded-lg p-4 cursor-pointer hover:border-purple-950">
+              <div key={index}
+              onClick={()=>navigate(`/subjects/${item.id}/topics`)}
+              className="flex gap-2 border border-gray-300 rounded-lg p-4 cursor-pointer hover:border-purple-950">
                 <img src={item.icon} alt="" />
                 <span className="content-center font-bold text-slate-700 ">
                   {item.title}
@@ -24,11 +28,6 @@ const QuizTopicScreen = () => {
               </div>
             );
           })}
-        </div>
-        <div className="my-8 w-14 m-auto">
-          <button className="px-6 py-3 rounded-lg bg-purple-950 text-white text-lg font-bold">
-            Continue
-          </button>
         </div>
       </div>
     </div>
