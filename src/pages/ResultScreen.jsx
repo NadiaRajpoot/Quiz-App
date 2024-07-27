@@ -4,16 +4,22 @@ import { RxCrossCircled } from "react-icons/rx";
 import { useContext } from "react";
 import ScoreContext from "../ScoreContext";
 import { NavLink } from "react-router-dom";
+import { ThemeContext } from "../ThemeContext";
 
 const ResultScreen = () => {
   const { score } = useContext(ScoreContext);
-  useEffect(()=>{
-    console.log("test score page")
-  },[])
+  const darktheme = useContext(ThemeContext);
+  useEffect(() => {
+    console.log("test score page");
+  }, []);
   return (
     <div className="md:w-6/12 w-10/12 mt-8 p-2 m-auto rounded-lg">
       <div className="flex flex-col gap-6 items-center justify-center">
-        <h1 className=" text-4xl  text-slate-800">Quiz Result</h1>
+        <h1
+          className={`text-4xl ${darktheme ? "text-white" : " text-slate-800"}`}
+        >
+          Quiz Result
+        </h1>
         <div>
           {score * 10 > 30 ? (
             <FaCircleCheck size={90} color="green" />
@@ -21,7 +27,11 @@ const ResultScreen = () => {
             <RxCrossCircled size={90} color="red" />
           )}
         </div>
-        <div className="font-semibold">
+        <div
+          className={`font-semibold ${
+            darktheme ? "text-white" : " text-slate-800"
+          }`}
+        >
           {score * 10 > 30
             ? "Nice Job , You have Passed!"
             : "Try again, You have Failed!"}
@@ -48,7 +58,14 @@ const ResultScreen = () => {
             </div>
           </div>
         </div>
-        <NavLink to={"/"} className=" text-sm underline uppercase  text-slate-800">Retake Test</NavLink>
+        <NavLink
+          to={"/"}
+          className={`text-sm underline uppercase font-semibold ${
+            darktheme === true ? "text-white" : " text-slate-800"
+          }`}
+        >
+          Retake Test
+        </NavLink>
       </div>
     </div>
   );

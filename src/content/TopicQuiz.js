@@ -276,46 +276,6 @@ export const topicsData = [
             ],
             answer: "combineReducers",
           },
-          {
-            question:
-              "The method used to subscribe to state changes in a Redux store is ____________.",
-            options: ["addListener", "listen", "subscribe", "onChange"],
-            answer: "subscribe",
-          },
-          {
-            question:
-              "To initialize the Redux store in a React application, you wrap the root component with ____________.",
-            options: [
-              "Provider",
-              "StoreProvider",
-              "StateProvider",
-              "RootProvider",
-            ],
-            answer: "Provider",
-          },
-          {
-            question:
-              "Which hook is used to dispatch actions in a functional React component?",
-            options: ["useAction", "useDispatch", "useReducer", "useStore"],
-            answer: "useDispatch",
-          },
-          {
-            question:
-              "In Redux, to select a specific piece of state from the store, you use ____________.",
-            options: ["useSelector", "useSelect", "useStore", "useState"],
-            answer: "useSelector",
-          },
-          {
-            question:
-              "How do you apply middleware like redux-thunk or redux-saga to a Redux store?",
-            options: [
-              "applyMiddleware",
-              "useMiddleware",
-              "attachMiddleware",
-              "addMiddleware",
-            ],
-            answer: "applyMiddleware",
-          },
         ],
       },
       {
@@ -333,6 +293,18 @@ export const topicsData = [
             ],
             answer: "To handle routing and navigation",
           },
+          {
+            question:
+              "What is the purpose of the 'useHistory' hook in React Router?",
+            options: [
+              "To access the current URL parameters",
+              "To access the current location object",
+              "To programmatically navigate to different routes",
+              "To create navigation links",
+            ],
+            answer: "To programmatically navigate to different routes",
+          },
+
           {
             question:
               "Which command is used to install react-router-dom in a React application?",
@@ -404,6 +376,17 @@ export const topicsData = [
               "To style active links",
             ],
             answer: "To redirect to another route",
+          },
+          {
+            question:
+              "Which component is used to wrap the entire application and enable routing in a React Router setup?",
+            options: [
+              "RouterProvider",
+              "RouterWrapper",
+              "BrowserRouter",
+              "HashRouter",
+            ],
+            answer: "BrowserRouter",
           },
         ],
       },
@@ -477,16 +460,7 @@ export const topicsData = [
             ],
             answer: "Using map() method",
           },
-          {
-            question: "How do you handle inline styles in JSX?",
-            options: [
-              "Using a string of CSS rules",
-              "Using an object with camelCased properties",
-              "Using an array of styles",
-              "Using a separate CSS file",
-            ],
-            answer: "Using an object with camelCased properties",
-          },
+
           {
             question: "Which of the following is not a valid JSX attribute?",
             options: ["onClick", "data-value", "aria-label", "for"],
@@ -512,47 +486,6 @@ export const topicsData = [
               "Converts it into XML",
             ],
             answer: "Converts it into JavaScript",
-          },
-          {
-            question: "How do you pass props to a component in JSX?",
-            options: [
-              "Using the props keyword",
-              "Using HTML attributes",
-              "Using context",
-              "Using a separate props file",
-            ],
-            answer: "Using HTML attributes",
-          },
-          {
-            question:
-              "What will happen if you try to return multiple elements from a component without a wrapping element in JSX?",
-            options: [
-              "It will throw an error",
-              "It will work as expected",
-              "It will render only the first element",
-              "It will render only the last element",
-            ],
-            answer: "It will throw an error",
-          },
-          {
-            question: "What is the correct way to use fragments in JSX?",
-            options: [
-              "<div></div>",
-              "<Fragment></Fragment>",
-              "<></>",
-              "<React.Fragment></React.Fragment>",
-            ],
-            answer: "<React.Fragment></React.Fragment>",
-          },
-          {
-            question: "How do you handle events in JSX?",
-            options: [
-              "Using lowercase event names",
-              "Using camelCase event names",
-              "Using uppercase event names",
-              "Using PascalCase event names",
-            ],
-            answer: "Using camelCase event names",
           },
         ],
       },
@@ -761,60 +694,6 @@ export const topicsData = [
             ],
             answer: "To wait for multiple promises to resolve",
           },
-          {
-            question: "How do you create a new promise in JavaScript?",
-            options: [
-              "new Promise((resolve, reject) => { ... })",
-              "Promise.create((resolve, reject) => { ... })",
-              "Promise.new((resolve, reject) => { ... })",
-              "new Promise.create((resolve, reject) => { ... })",
-            ],
-            answer: "new Promise((resolve, reject) => { ... })",
-          },
-          {
-            question:
-              'What is the output of the following code?\n\nconsole.log("Start");\nsetTimeout(() => { console.log("Middle"); }, 0);\nconsole.log("End");',
-            options: [
-              "Start Middle End",
-              "Start End Middle",
-              "Middle Start End",
-              "End Start Middle",
-            ],
-            answer: "Start End Middle",
-          },
-          {
-            question:
-              "Which of the following is a feature of the async/await syntax?",
-            options: [
-              "It makes asynchronous code look and behave like synchronous code",
-              "It is built on top of promises",
-              "It can only be used inside functions marked with the async keyword",
-              "All of the above",
-            ],
-            answer: "All of the above",
-          },
-          {
-            question:
-              "Which method would you use to run an asynchronous function after a delay?",
-            options: [
-              "setTimeout()",
-              "setInterval()",
-              "setImmediate()",
-              "process.nextTick()",
-            ],
-            answer: "setTimeout()",
-          },
-          {
-            question:
-              "What is the difference between microtasks and macrotasks in JavaScript?",
-            options: [
-              "Microtasks are executed before macrotasks",
-              "Macrotasks are executed before microtasks",
-              "They are executed in parallel",
-              "There is no difference",
-            ],
-            answer: "Microtasks",
-          },
         ],
       },
       {
@@ -852,27 +731,7 @@ export const topicsData = [
             ],
             answer: "document.createElement()",
           },
-          {
-            question: "Which method is used to remove an element from the DOM?",
-            options: [
-              "removeChild()",
-              "deleteChild()",
-              "removeElement()",
-              "deleteElement()",
-            ],
-            answer: "removeChild()",
-          },
-          {
-            question:
-              "How do you add a new child element to an existing element?",
-            options: [
-              "appendChild()",
-              "addChild()",
-              "insertChild()",
-              "createChild()",
-            ],
-            answer: "appendChild()",
-          },
+
           {
             question:
               "Which property is used to change the text content of an HTML element?",
@@ -900,40 +759,7 @@ export const topicsData = [
             ],
             answer: "element.addEventListener('event', function)",
           },
-          {
-            question:
-              "Which method can be used to get all elements of a specific class?",
-            options: [
-              "document.getElementsByClassName('className')",
-              "document.querySelectorAll('.className')",
-              "document.getElementByClass('className')",
-              "Both document.getElementsByClassName() and document.querySelectorAll()",
-            ],
-            answer:
-              "Both document.getElementsByClassName() and document.querySelectorAll()",
-          },
-          {
-            question:
-              "How can you change the attribute value of an HTML element?",
-            options: [
-              "element.setAttribute('attribute', 'value')",
-              "element.changeAttribute('attribute', 'value')",
-              "element.updateAttribute('attribute', 'value')",
-              "element.modifyAttribute('attribute', 'value')",
-            ],
-            answer: "element.setAttribute('attribute', 'value')",
-          },
-          {
-            question:
-              "What is the method to prevent the default action of an event in JavaScript?",
-            options: [
-              "event.stopDefault()",
-              "event.preventDefault()",
-              "event.prevent()",
-              "event.stopAction()",
-            ],
-            answer: "event.preventDefault()",
-          },
+
           {
             question:
               "Which property would you use to change the style of an HTML element dynamically?",
@@ -993,43 +819,14 @@ export const topicsData = [
             ],
             answer: "A block of code designed to perform a particular task",
           },
-          {
-            question: "How do you define a function in JavaScript?",
-            options: [
-              "function:myFunction() {}",
-              "def myFunction() {}",
-              "function myFunction() {}",
-              "func myFunction() {}",
-            ],
-            answer: "function myFunction() {}",
-          },
-          {
-            question:
-              'How do you call a function named "myFunction" in JavaScript?',
-            options: [
-              "myFunction();",
-              "call myFunction();",
-              "run myFunction();",
-              "execute myFunction();",
-            ],
-            answer: "myFunction();",
-          },
+
           {
             question:
               "What is the keyword used to return a value from a function?",
             options: ["get", "return", "yield", "output"],
             answer: "return",
           },
-          {
-            question: "How can you pass a parameter to a function?",
-            options: [
-              "function myFunction(param) {}",
-              "function myFunction {param} {}",
-              "function myFunction[param] {}",
-              "function myFunction<param> {}",
-            ],
-            answer: "function myFunction(param) {}",
-          },
+
           {
             question: "What is an anonymous function in JavaScript?",
             options: [
@@ -1040,16 +837,7 @@ export const topicsData = [
             ],
             answer: "A function without a name",
           },
-          {
-            question: "Which of the following is a self-invoking function?",
-            options: [
-              "function() {}();",
-              "(function() {})();",
-              "function() {}();",
-              "(function() {}();",
-            ],
-            answer: "(function() {})();",
-          },
+
           {
             question: "What is a callback function?",
             options: [
@@ -1070,16 +858,7 @@ export const topicsData = [
             ],
             answer: "let myFunction = function() {};",
           },
-          {
-            question: "What is an arrow function in JavaScript?",
-            options: [
-              "A function defined using the => syntax",
-              "A function that always returns a value",
-              "A function with no parameters",
-              "A function that does not use the return keyword",
-            ],
-            answer: "A function defined using the => syntax",
-          },
+
           {
             question:
               "How do you declare a default parameter value in a function?",
@@ -1151,59 +930,7 @@ export const topicsData = [
             ],
             answer: "An action or occurrence that happens in the browser",
           },
-          {
-            question:
-              "Which method is used to attach an event handler to an element?",
-            options: [
-              "addEventListener()",
-              "attachEvent()",
-              "onEvent()",
-              "bindEvent()",
-            ],
-            answer: "addEventListener()",
-          },
-          {
-            question:
-              "What is the purpose of the event object in an event handler?",
-            options: [
-              "To provide information about the event that occurred",
-              "To store the state of the document",
-              "To manage the DOM elements",
-              "To define global variables",
-            ],
-            answer: "To provide information about the event that occurred",
-          },
-          {
-            question: "How do you prevent the default action of an event?",
-            options: [
-              "event.preventDefault()",
-              "event.stopPropagation()",
-              "event.stopImmediatePropagation()",
-              "event.cancel()",
-            ],
-            answer: "event.preventDefault()",
-          },
-          {
-            question: "Which method can be used to remove an event listener?",
-            options: [
-              "removeEventListener()",
-              "detachEvent()",
-              "offEvent()",
-              "unbindEvent()",
-            ],
-            answer: "removeEventListener()",
-          },
-          {
-            question:
-              "How do you handle an event for a specific element in JavaScript?",
-            options: [
-              "element.addEventListener('event', handlerFunction)",
-              "element.onEvent('event', handlerFunction)",
-              "element.handleEvent('event', handlerFunction)",
-              "element.bindEvent('event', handlerFunction)",
-            ],
-            answer: "element.addEventListener('event', handlerFunction)",
-          },
+
           {
             question: "What does event.target refer to in an event handler?",
             options: [
@@ -1314,44 +1041,7 @@ export const topicsData = [
             options: [".py", ".python", ".pyt", ".pyth"],
             answer: ".py",
           },
-          {
-            question: 'How do you print "Hello, World!" in Python?',
-            options: [
-              'print("Hello, World!")',
-              'echo "Hello, World!"',
-              'printf("Hello, World!")',
-              'console.log("Hello, World!")',
-            ],
-            answer: 'print("Hello, World!")',
-          },
-          {
-            question:
-              "Which of the following is a valid variable name in Python?",
-            options: ["my_var", "my-var", "my var", "my@var"],
-            answer: "my_var",
-          },
-          {
-            question:
-              "What data type is the result of the expression 5/2 in Python 3?",
-            options: ["Integer", "Float", "String", "Complex"],
-            answer: "Float",
-          },
-          {
-            question:
-              "Which of the following keywords is used to define a function in Python?",
-            options: ["def", "function", "fun", "define"],
-            answer: "def",
-          },
-          {
-            question: "How do you create a list in Python?",
-            options: [
-              "my_list = []",
-              "my_list = ()",
-              "my_list = {}",
-              "my_list = //",
-            ],
-            answer: "my_list = []",
-          },
+
           {
             question:
               "Which method can be used to add an item to the end of a list in Python?",
@@ -1443,53 +1133,7 @@ export const topicsData = [
             ],
             answer: "Encapsulation, Inheritance, Polymorphism, and Abstraction",
           },
-          {
-            question: "How do you define a class in Python?",
-            options: [
-              "class ClassName:",
-              "define class ClassName:",
-              "create class ClassName:",
-              "class ClassName()",
-            ],
-            answer: "class ClassName:",
-          },
-          {
-            question: "Which method is used to initialize an object in Python?",
-            options: ["__init__()", "initialize()", "start()", "setup()"],
-            answer: "__init__()",
-          },
-          {
-            question: "What does encapsulation refer to in OOP?",
-            options: [
-              "The bundling of data with methods that operate on the data",
-              "The ability to use a subclass in place of a superclass",
-              "The ability to create multiple methods with the same name but different parameters",
-              "The process of defining a new class based on an existing class",
-            ],
-            answer:
-              "The bundling of data with methods that operate on the data",
-          },
-          {
-            question: "How do you create a subclass in Python?",
-            options: [
-              "class SubclassName(SuperclassName):",
-              "class SubclassName extends SuperclassName:",
-              "class SubclassName implements SuperclassName:",
-              "class SubclassName inherits SuperclassName:",
-            ],
-            answer: "class SubclassName(SuperclassName):",
-          },
-          {
-            question: "What is polymorphism in OOP?",
-            options: [
-              "The ability to use a single method name for different types of operations",
-              "The process of hiding the internal state of an object",
-              "The concept of creating a new class from an existing class",
-              "The ability to create methods with the same name but different parameters",
-            ],
-            answer:
-              "The ability to use a single method name for different types of operations",
-          },
+
           {
             question:
               "Which keyword is used to call a method from the parent class?",
@@ -1597,53 +1241,7 @@ export const topicsData = [
             ],
             answer: "A lightweight web framework for Python",
           },
-          {
-            question: "How do you create a new Flask application?",
-            options: [
-              "app = Flask(__name__)",
-              "Flask.app()",
-              "Flask.create_app()",
-              "new Flask()",
-            ],
-            answer: "app = Flask(__name__)",
-          },
-          {
-            question: "Which method is used to define a route in Flask?",
-            options: [
-              "@app.route()",
-              "app.add_route()",
-              "app.define_route()",
-              "route()",
-            ],
-            answer: "@app.route()",
-          },
-          {
-            question:
-              "What is the default port for a Flask development server?",
-            options: ["5000", "8000", "3000", "8080"],
-            answer: "5000",
-          },
-          {
-            question: "How do you start a Flask development server?",
-            options: [
-              "flask run",
-              "python app.py",
-              "flask start",
-              "python flask.py",
-            ],
-            answer: "flask run",
-          },
-          {
-            question:
-              "What is the purpose of the `render_template` function in Flask?",
-            options: [
-              "To render HTML templates",
-              "To handle form submissions",
-              "To connect to a database",
-              "To manage application configurations",
-            ],
-            answer: "To render HTML templates",
-          },
+
           {
             question: "How do you pass data from a Flask route to a template?",
             options: [
@@ -1764,54 +1362,7 @@ export const topicsData = [
             ],
             answer: "pd.read_csv()",
           },
-          {
-            question:
-              "What method is used to display the first 5 rows of a DataFrame?",
-            options: ["df.head()", "df.first()", "df.top()", "df.preview()"],
-            answer: "df.head()",
-          },
-          {
-            question: "How can you get summary statistics of a DataFrame?",
-            options: [
-              "df.describe()",
-              "df.summary()",
-              "df.stats()",
-              "df.info()",
-            ],
-            answer: "df.describe()",
-          },
-          {
-            question:
-              "Which method is used to drop missing values from a DataFrame?",
-            options: [
-              "df.dropna()",
-              "df.remove_na()",
-              "df.drop_missing()",
-              "df.clean()",
-            ],
-            answer: "df.dropna()",
-          },
-          {
-            question: "How do you select a specific column in a DataFrame?",
-            options: [
-              "df['column_name']",
-              "df.column_name",
-              "df.get('column_name')",
-              "df.select('column_name')",
-            ],
-            answer: "df['column_name']",
-          },
-          {
-            question:
-              "Which method is used to sort a DataFrame by a specific column?",
-            options: [
-              "df.sort_values()",
-              "df.order_by()",
-              "df.sort()",
-              "df.arrange()",
-            ],
-            answer: "df.sort_values()",
-          },
+
           {
             question:
               "How can you group data by a column and calculate the mean of each group?",
@@ -1898,57 +1449,7 @@ export const topicsData = [
             ],
             answer: "A machine learning library for Python",
           },
-          {
-            question:
-              "Which function is used to load a dataset in scikit-learn?",
-            options: [
-              "datasets.load_*()",
-              "datasets.get_*()",
-              "datasets.fetch_*()",
-              "datasets.retrieve_*()",
-            ],
-            answer: "datasets.load_*()",
-          },
-          {
-            question:
-              "How do you split data into training and testing sets using scikit-learn?",
-            options: [
-              "train_test_split()",
-              "split_train_test()",
-              "train_test()",
-              "data_split()",
-            ],
-            answer: "train_test_split()",
-          },
-          {
-            question:
-              "What is the default scoring metric for classification models in scikit-learn?",
-            options: ["Accuracy", "Precision", "Recall", "F1 Score"],
-            answer: "Accuracy",
-          },
-          {
-            question:
-              "Which scikit-learn function is used to create a linear regression model?",
-            options: [
-              "LinearRegression()",
-              "LogisticRegression()",
-              "DecisionTree()",
-              "SVR()",
-            ],
-            answer: "LinearRegression()",
-          },
-          {
-            question:
-              "How can you evaluate the performance of a classification model in scikit-learn?",
-            options: [
-              "Using metrics such as accuracy, precision, recall, and F1 score",
-              "Using mean squared error (MSE) and R-squared",
-              "Using cross-validation only",
-              "Using feature importance only",
-            ],
-            answer:
-              "Using metrics such as accuracy, precision, recall, and F1 score",
-          },
+
           {
             question:
               "Which method is used to fit a model to the training data in scikit-learn?",
@@ -2064,50 +1565,7 @@ export const topicsData = [
             ],
             answer: "Muhammad Ali Jinnah",
           },
-          {
-            question:
-              "In which year did Pakistan gain independence from British rule?",
-            options: ["1947", "1950", "1965", "1971"],
-            answer: "1947",
-          },
-          {
-            question:
-              "What was the primary reason for the creation of Pakistan?",
-            options: [
-              "Religious differences",
-              "Economic opportunities",
-              "Political instability",
-              "Colonial oppression",
-            ],
-            answer: "Religious differences",
-          },
-          {
-            question:
-              "What was the first capital of Pakistan after its independence?",
-            options: ["Karachi", "Lahore", "Islamabad", "Rawalpindi"],
-            answer: "Karachi",
-          },
-          {
-            question:
-              "Which event led to the secession of East Pakistan and the creation of Bangladesh in 1971?",
-            options: [
-              "The Bangladesh Liberation War",
-              "The Indo-Pakistani War of 1965",
-              "The Simla Agreement",
-              "The Tashkent Agreement",
-            ],
-            answer: "The Bangladesh Liberation War",
-          },
-          {
-            question: "Who was the first President of Pakistan?",
-            options: [
-              "Major General Iskander Mirza",
-              "Ayub Khan",
-              "Zulfikar Ali Bhutto",
-              "Pervez Musharraf",
-            ],
-            answer: "Major General Iskander Mirza",
-          },
+
           {
             question:
               "Which political party played a significant role in the creation of Pakistan?",
@@ -2213,31 +1671,7 @@ export const topicsData = [
             options: ["Sahara", "Gobi", "Kalahari", "Antarctic Desert"],
             answer: "Antarctic Desert",
           },
-          {
-            question: "Which river is the longest in the world?",
-            options: ["Nile", "Amazon", "Yangtze", "Mississippi"],
-            answer: "Nile",
-          },
-          {
-            question: "Which country has the most number of time zones?",
-            options: ["Russia", "United States", "China", "Brazil"],
-            answer: "Russia",
-          },
-          {
-            question: "What is the smallest country in the world by land area?",
-            options: ["Vatican City", "Monaco", "San Marino", "Liechtenstein"],
-            answer: "Vatican City",
-          },
-          {
-            question: "Which mountain range separates Europe from Asia?",
-            options: ["Ural Mountains", "Himalayas", "Andes", "Rockies"],
-            answer: "Ural Mountains",
-          },
-          {
-            question: "What is the capital of Australia?",
-            options: ["Canberra", "Sydney", "Melbourne", "Brisbane"],
-            answer: "Canberra",
-          },
+
           {
             question: "Which ocean is the largest in the world?",
             options: [
@@ -2321,36 +1755,7 @@ export const topicsData = [
             options: ["H2O", "CO2", "O2", "NaCl"],
             answer: "H2O",
           },
-          {
-            question: "Which planet is known as the Red Planet?",
-            options: ["Mars", "Venus", "Jupiter", "Saturn"],
-            answer: "Mars",
-          },
-          {
-            question: "What is the powerhouse of the cell?",
-            options: [
-              "Mitochondria",
-              "Nucleus",
-              "Ribosome",
-              "Endoplasmic Reticulum",
-            ],
-            answer: "Mitochondria",
-          },
-          {
-            question: "What is the basic unit of life?",
-            options: ["Cell", "Tissue", "Organ", "System"],
-            answer: "Cell",
-          },
-          {
-            question: "Which element is most abundant in the Earth’s crust?",
-            options: ["Oxygen", "Silicon", "Aluminum", "Iron"],
-            answer: "Oxygen",
-          },
-          {
-            question: "What is the chemical formula for table salt?",
-            options: ["NaCl", "KCl", "MgCl2", "CaCO3"],
-            answer: "NaCl",
-          },
+
           {
             question: "What is the speed of light in a vacuum?",
             options: [
@@ -2438,37 +1843,7 @@ export const topicsData = [
             options: ["France", "Croatia", "Germany", "Brazil"],
             answer: "France",
           },
-          {
-            question: "How many players are there in a standard soccer team?",
-            options: ["11", "7", "9", "13"],
-            answer: "11",
-          },
-          {
-            question: "In which sport would you perform a slam dunk?",
-            options: ["Basketball", "Volleyball", "Tennis", "Football"],
-            answer: "Basketball",
-          },
-          {
-            question: "Which Olympic sport is known as the “gentleman’s game”?",
-            options: ["Cricket", "Tennis", "Golf", "Rugby"],
-            answer: "Cricket",
-          },
-          {
-            question:
-              "Who holds the record for the most home runs in Major League Baseball?",
-            options: [
-              "Barry Bonds",
-              "Hank Aaron",
-              "Babe Ruth",
-              "Alex Rodriguez",
-            ],
-            answer: "Barry Bonds",
-          },
-          {
-            question: "Which country is known for the sport of sumo wrestling?",
-            options: ["Japan", "China", "Korea", "Mongolia"],
-            answer: "Japan",
-          },
+
           {
             question: "What is the standard distance of a marathon race?",
             options: [
@@ -2556,53 +1931,7 @@ export const topicsData = [
             ],
             answer: "Major General Iskander Mirza",
           },
-          {
-            question: "Which political party did Benazir Bhutto lead?",
-            options: [
-              "Pakistan Peoples Party",
-              "Pakistan Muslim League (N)",
-              "Jamaat-e-Islami",
-              "Pakistan Tehreek-e-Insaf",
-            ],
-            answer: "Pakistan Peoples Party",
-          },
-          {
-            question: "In which year did Pakistan gain independence?",
-            options: ["1947", "1956", "1965", "1971"],
-            answer: "1947",
-          },
-          {
-            question: "Who was the founder of Pakistan?",
-            options: [
-              "Muhammad Ali Jinnah",
-              "Liaquat Ali Khan",
-              "Zulfikar Ali Bhutto",
-              "Ayub Khan",
-            ],
-            answer: "Muhammad Ali Jinnah",
-          },
-          {
-            question:
-              "Which Pakistani Prime Minister was dismissed by President Ayub Khan in 1958?",
-            options: [
-              "Feroz Khan Noon",
-              "Liaquat Ali Khan",
-              "Zulfikar Ali Bhutto",
-              "Nawaz Sharif",
-            ],
-            answer: "Feroz Khan Noon",
-          },
-          {
-            question:
-              "Which party won the majority in the 2018 General Elections?",
-            options: [
-              "Pakistan Tehreek-e-Insaf",
-              "Pakistan Muslim League (N)",
-              "Pakistan Peoples Party",
-              "Jamaat-e-Islami",
-            ],
-            answer: "Pakistan Tehreek-e-Insaf",
-          },
+
           {
             question: "What is the highest legislative body in Pakistan?",
             options: [
@@ -2613,17 +1942,7 @@ export const topicsData = [
             ],
             answer: "The National Assembly",
           },
-          {
-            question:
-              "Who served as the Chief Martial Law Administrator of Pakistan in 1977?",
-            options: [
-              "Zia-ul-Haq",
-              "Ayub Khan",
-              "Pervez Musharraf",
-              "Yahya Khan",
-            ],
-            answer: "Zia-ul-Haq",
-          },
+
           {
             question:
               'Which amendment to the Constitution of Pakistan introduced the concept of "Devolution of Power" to local governments?',
@@ -3381,11 +2700,7 @@ export const topicsData = [
             answer:
               "A building block of an Angular application that controls a part of the user interface",
           },
-          {
-            question: "Which decorator is used to define an Angular component?",
-            options: ["@Component", "@Directive", "@NgModule", "@Service"],
-            answer: "@Component",
-          },
+
           {
             question:
               "What is the purpose of the `templateUrl` property in an Angular component?",
@@ -4678,12 +3993,7 @@ export const topicsData = [
             ],
             answer: "@keyframes",
           },
-          {
-            question:
-              "What is the default value of the `animation-duration` property?",
-            options: ["0s", "1s", "2s", "infinite"],
-            answer: "0s",
-          },
+
           {
             question:
               "Which property controls the delay before an animation starts?",
@@ -4795,12 +4105,7 @@ export const topicsData = [
             answer:
               "<meta name='viewport' content='width=device-width, initial-scale=1'>",
           },
-          {
-            question:
-              "Which CSS media query feature is used to target different screen widths?",
-            options: ["width", "height", "device-width", "orientation"],
-            answer: "width",
-          },
+
           {
             question: "What is the purpose of the `@media` rule in CSS?",
             options: [
@@ -5517,12 +4822,7 @@ export const topicsData = [
             ],
             answer: "Route::get",
           },
-          {
-            question:
-              "What is the default route file for web routes in a Laravel application?",
-            options: ["api.php", "web.php", "routes.php", "app.php"],
-            answer: "web.php",
-          },
+
           {
             question: "Which route method is used to handle POST requests?",
             options: [
@@ -5632,17 +4932,7 @@ export const topicsData = [
             ],
             answer: "app/Http/Controllers",
           },
-          {
-            question:
-              "How do you create a new controller using the Artisan command-line tool?",
-            options: [
-              "php artisan make:controller ControllerName",
-              "php artisan create:controller ControllerName",
-              "php artisan generate:controller ControllerName",
-              "php artisan controller:make ControllerName",
-            ],
-            answer: "php artisan make:controller ControllerName",
-          },
+
           {
             question:
               "What is the purpose of the `__construct` method in a Laravel controller?",
@@ -5885,17 +5175,7 @@ export const topicsData = [
             options: ["@include", "@extend", "@yield", "@section"],
             answer: "@include",
           },
-          {
-            question:
-              "How do you pass data from a controller to a view in Laravel?",
-            options: [
-              "$view->with('key', 'value');",
-              "return view('view_name', ['key' => 'value']);",
-              "$view->data('key', 'value');",
-              "return view('view_name')->data('key', 'value');",
-            ],
-            answer: "return view('view_name', ['key' => 'value']);",
-          },
+
           {
             question:
               "Which Blade directive is used to define a section in a layout?",

@@ -2,8 +2,9 @@ import React, { useContext, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { topicsData } from "../content/SubjectTopics";
 import ScoreContext from "../ScoreContext";
-
+import { ThemeContext } from "../ThemeContext";
 const TopicsPage = () => {
+  const darktheme = useContext(ThemeContext);
   const { setScore } = useContext(ScoreContext);
   useEffect(() => {
     setScore(0);
@@ -19,7 +20,11 @@ const TopicsPage = () => {
 
   return (
     <div className="max-w-[70%] mt-10 mx-auto p-4">
-      <h1 className="text-3xl font-bold  text-purple-950 uppercase text-center mb-10">
+      <h1
+        className={`text-3xl font-bold ${
+          darktheme ? "text-white" : "text-purple-950"
+        } uppercase text-center mb-10`}
+      >
         Select a Topic
       </h1>
       <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
