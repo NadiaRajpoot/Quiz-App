@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { topicsData } from "../content/TopicQuiz";
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
 import ScoreContext from "../ScoreContext";
 
 const TestPages = () => {
-  const { setScore } = useContext(ScoreContext);
+  const {score, setScore } = useContext(ScoreContext);
   const [answeredQuestions, setAnsweredQuestions] = useState({});
-
+  useEffect(()=>{
+    setScore(0)
+  },[])
   const { subjectId, topicId } = useParams();
   const navigate = useNavigate();
 
@@ -23,57 +24,62 @@ const TestPages = () => {
       ...prevState,
       [questionId]: option,
     }));
+    checkAns(questionId, option);
   };
 
-  const checkAns = (mcq, option) => {
-    if (mcq.answer === option && !answeredQuestions[mcq.question]) {
+  const checkAns = (questionId, option) => {
+    const mcq = topic.mcqs.find((mcq) => mcq.question === questionId);
+    if (mcq.answer === option && !answeredQuestions[questionId]) {
       setScore((prev) => prev + 1);
       setAnsweredQuestions((prev) => ({
         ...prev,
-        [mcq.question]: true,
+        [questionId]: true,
       }));
     }
   };
+
   if (!topic) {
     return <div>Topic not found</div>;
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Test: {topic.name}</h1>
-      <form>
-        {topic.mcqs.map((mcq, index) => (
-          <div key={index} className="mb-4">
-            <p className="font-semibold mb-2">{mcq.question}</p>
-            <div className="flex flex-col">
-              {mcq.options.map((option, i) => (
-                <label key={i} className="flex items-center mb-2">
-                  <input
-                    type="radio"
-                    name={mcq.question}
-                    value={option}
-                    checked={selectedOptions[mcq.question] === option}
-                    onChange={() => handleOptionChange(mcq.question, option)}
-                    className="mr-2"
-                    onClick={() => checkAns(mcq, option)}
-                    required
-                  />
-                  {option}
-                </label>
-              ))}
+    <div className="bg-gray-100">
+      <div className="max-w-[70%] pt-10 mx-auto p-4 ">
+        <h1 className="text-3xl font-bold text-purple-950 uppercase text-center mb-10">
+          Test Topic : {topic.name}
+        </h1>
+        <form>
+          {topic.mcqs.map((mcq, index) => (
+            <div key={index} className="mb-10">
+              <p className="font-semibold mb-4 text-2xl">{`${index+1}) `}{mcq.question}</p>
+              <div className="flex flex-col">
+                {mcq.options.map((option, i) => (
+                  <div
+                    key={i}
+                    className={`p-4 border rounded-lg mb-2 cursor-pointer ${
+                      selectedOptions[mcq.question] === option
+                        ? "bg-purple-400 text-white "
+                        : "bg-white border-gray-300"
+                    }`}
+                    onClick={() => handleOptionChange(mcq.question, option)}
+                  >
+                    {option}
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-        <button
-          onClick={(subjectId, topicId) => {
-            navigate(`/subjects/${subjectId}/topics/${topicId}/test/score`);
-          }}
-          type="submit"
-          className="px-6 py-3 rounded-lg bg-purple-950 text-white text-lg font-bold mt-4"
-        >
-          Submit
-        </button>
-      </form>
+          ))}
+          <button
+            onClick={() =>
+              navigate(`/subjects/${subjectId}/topics/${topicId}/test/score`)
+            }
+            type="button"
+            className="px-6 py-3 rounded-lg bg-purple-950 text-white text-lg font-bold mt-4"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
