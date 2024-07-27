@@ -1,25 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaCircleCheck } from "react-icons/fa6";
 import { RxCrossCircled } from "react-icons/rx";
 import { useContext } from "react";
 import ScoreContext from "../ScoreContext";
+import { NavLink } from "react-router-dom";
 
 const ResultScreen = () => {
   const { score } = useContext(ScoreContext);
-
+  useEffect(()=>{
+    console.log("test score page")
+  },[])
   return (
     <div className="md:w-6/12 w-10/12 mt-8 p-2 m-auto rounded-lg">
       <div className="flex flex-col gap-6 items-center justify-center">
         <h1 className=" text-4xl  text-slate-800">Quiz Result</h1>
         <div>
-          {score > 30 ? (
+          {score * 10 > 30 ? (
             <FaCircleCheck size={90} color="green" />
           ) : (
             <RxCrossCircled size={90} color="red" />
           )}
         </div>
         <div className="font-semibold">
-          {score > 30
+          {score * 10 > 30
             ? "Nice Job , You have Passed!"
             : "Try again, You have Failed!"}
         </div>
@@ -45,6 +48,7 @@ const ResultScreen = () => {
             </div>
           </div>
         </div>
+        <NavLink to={"/"} className=" text-sm underline uppercase  text-slate-800">Retake Test</NavLink>
       </div>
     </div>
   );
