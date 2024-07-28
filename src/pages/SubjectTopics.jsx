@@ -4,7 +4,7 @@ import { topicsData } from "../content/SubjectTopics";
 import ScoreContext from "../ScoreContext";
 import { ThemeContext } from "../ThemeContext";
 const TopicsPage = () => {
-  const darktheme = useContext(ThemeContext);
+  const {darktheme} = useContext(ThemeContext);
   const { setScore } = useContext(ScoreContext);
   useEffect(() => {
     setScore(0);

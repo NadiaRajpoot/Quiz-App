@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import ScoreContext from "../ScoreContext";
 import { ThemeContext } from "../ThemeContext";
 const TestPages = () => {
-  const darktheme = useContext(ThemeContext);
+  const {darktheme} = useContext(ThemeContext);
   const { score, setScore } = useContext(ScoreContext);
   const [answeredQuestions, setAnsweredQuestions] = useState({});
   useEffect(() => {

@@ -8,7 +8,7 @@ import { ThemeContext } from "../ThemeContext";
 
 const ResultScreen = () => {
   const { score } = useContext(ScoreContext);
-  const darktheme = useContext(ThemeContext);
+  const {darktheme} = useContext(ThemeContext);
   useEffect(() => {
     console.log("test score page");
   }, []);
