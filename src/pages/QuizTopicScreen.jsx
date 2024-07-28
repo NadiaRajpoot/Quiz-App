@@ -5,8 +5,7 @@ import { ThemeContext } from "../ThemeContext";
 
 const QuizTopicScreen = () => {
   const navigate = useNavigate();
-  const darktheme = useContext(ThemeContext);
-  console.log(darktheme);
+  const {darktheme} = useContext(ThemeContext);
   return (
     <div
       className={`flex flex-col w-10/12 m-auto mt-14 items-center justify-center ${
