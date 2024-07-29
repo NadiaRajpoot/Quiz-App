@@ -4,7 +4,7 @@ import { topicsData } from "../content/SubjectTopics";
 import ScoreContext from "../ScoreContext";
 import { ThemeContext } from "../ThemeContext";
 const TopicsPage = () => {
-  const {darktheme} = useContext(ThemeContext);
+  const { darktheme } = useContext(ThemeContext);
   const { setScore } = useContext(ScoreContext);
   useEffect(() => {
     setScore(0);
@@ -21,9 +21,9 @@ const TopicsPage = () => {
   return (
     <div className="max-w-[70%] mt-10 mx-auto p-4">
       <h1
-        className={`text-3xl font-bold ${
-          darktheme ? "text-white" : "text-purple-950"
-        } uppercase text-center mb-10`}
+        className={`md:text-3xl font-bold ${
+          darktheme ? "text-white" : "text-[#9333ea]"
+        } uppercase text-2xl  text-center mb-10`}
       >
         Select a Topic
       </h1>

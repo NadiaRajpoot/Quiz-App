@@ -13,7 +13,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ darktheme, setDarkTheme }}>
       <ScoreContext.Provider value={{ score, setScore }}>
-        <div className={`h-screen ${darktheme ? "bg-[#141414]" : "bg-white"}`}>
+        <div className={`h-screen ${darktheme ? "bg-[#141C2E]" : "bg-white"}`}>
           <Header />
           <Outlet />
         </div>
