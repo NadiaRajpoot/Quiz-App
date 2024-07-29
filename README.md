@@ -2,7 +2,7 @@
 
 Welcome to the Quizzy Quiz App! This application was developed as a part of the Bytewise Fellowship program. The Quiz App allows users to test their knowledge on various topics by answering multiple-choice questions.
 
-[QuizApp][https://myquizzyquizz.netlify.app/]
+[QuizApp](https://myquizzyquizz.netlify.app/)
 
 ## Table of Contents
 
