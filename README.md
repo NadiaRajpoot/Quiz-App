@@ -27,7 +27,7 @@ To run this project locally, follow these steps:
    cd quiz-app
    ```
 
-```
+
 2.  **Install dependencies:**
 
 ```
