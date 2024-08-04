@@ -3,6 +3,7 @@
 Welcome to the Quizzy Quiz App! This application was developed as a part of the Bytewise Fellowship program. The Quiz App allows users to test their knowledge on various topics by answering multiple-choice questions.
 
 [QuizApp](https://myquizzyquizz.netlify.app/)
+[quizzyQuizzDemo](https://quizzyquizz.vercel.app/)
 
 ## Table of Contents
 
@@ -86,5 +87,5 @@ git push origin feature-name
 ```
 7. **Create a pull request:**
 
-Open a pull request from your forked repository to the main reposito
+Open a pull request from your forked repository to the main repository
 ```
