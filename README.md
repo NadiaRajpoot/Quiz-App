@@ -4,7 +4,7 @@ Welcome to the Quizzy Quiz App! This application was developed as a part of the 
 
 [QuizApp](https://myquizzyquizz.netlify.app/)
 <br/>
-[quizzyQuizzDemo](https://quizzyquizz.vercel.app/)
+[quizzyQuizzDemo](quizzyquizz.vercel.app)
 
 ## Table of Contents
 
